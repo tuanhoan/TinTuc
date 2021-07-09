@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TinTuc.Models.Tintuc>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Theloaitin.Tentheloai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tieudetin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Noidungtin)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Theloaitin.Tentheloai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tieudetin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Noidungtin)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaTin }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaTin }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaTin })
+        </td>
+    </tr>
+}
+
+</table>

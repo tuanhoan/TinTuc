@@ -1,0 +1,42 @@
+﻿@model TinTuc.Models.Tintuc
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tintuc</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Theloaitin.Tentheloai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Theloaitin.Tentheloai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tieudetin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tieudetin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Noidungtin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Noidungtin)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaTin }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

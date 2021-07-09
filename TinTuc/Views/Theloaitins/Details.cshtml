@@ -1,0 +1,26 @@
+﻿@model TinTuc.Models.Theloaitin
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Thể loại tin</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tentheloai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tentheloai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.Maloai }) |
+    @Html.ActionLink("Trở về", "Index")
+</p>
